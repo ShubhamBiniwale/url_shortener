@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>My Short Url!</title>
+		<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+	</head>
+	<body>
+		
+		<div class="navbar navbar-inverse navbar-fixed-top header" role="navigation">
+		  <a href="{{ url_for('url_shortener.home') }}" style="font-family: monospace;" class="logo">MY_URL_SHORTNER</a>
+		  <div class="header-right">
+		    <a class="active" style="font-family: monospace; margin-right: 50px	" href="{{ url_for('url_shortener.home') }}">Home</a>
+		  </div>
+			
+		</div>
+		<div class="container mid_center text-center" >
+			{% block container %}{% endblock %}
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/
+		2.0.0/jquery.min.js"></script>
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<!-- <script src="{{ url_for('static', filename='js/main.js') }}"></script> -->
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+	<form action="/shortened_url" method="POST">
+	  <div class="form-group">
+	    <input type="link" name="link" style="font-family: Verdana; height: 40px; margin-top: 20px" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Paste your link here">
+	  </div>
+	  <button style="font-family: monospace;" class="btn btn-primary active">Submit</button>
+	</form>
+{% endblock %}
